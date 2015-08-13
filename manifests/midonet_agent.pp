@@ -63,7 +63,11 @@
 # limitations under the License.
 #
 
-class midonet::midonet_agent($zk_servers, $cassandra_seeds) {
+class midonet::midonet_agent(
+  $zk_servers,
+  $cassandra_seeds,
+  $install_java = true,
+) {
 
   class {'midonet::midonet_agent::install':
   }

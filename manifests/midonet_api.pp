@@ -104,7 +104,9 @@ class midonet::midonet_api(
   $api_ip=$::ipaddress,
   $api_port='8080',
   $bind_address='0.0.0.0',
-  $catalina_base) {
+  $catalina_base,
+  $install_java = true,
+) {
 
     include midonet::midonet_api::augeas
 
