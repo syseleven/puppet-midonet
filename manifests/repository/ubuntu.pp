@@ -40,7 +40,6 @@ class midonet::repository::ubuntu (
             notice('Adding midonet sources for Debian-like distribution')
 
             include apt
-            include apt::update
 
             # Update the package list each time a package is defined. That takes
             # time, but it ensures it will not fail for out of date repository info
@@ -65,14 +64,7 @@ class midonet::repository::ubuntu (
             # Dummy exec to wrap apt_update
             exec {'update-midonet-repos':
                 command => '/bin/true',
-                require => [Exec['apt_update'],
-                            Apt::Source['midonet'],
-                            Apt::Source['midonet-openstack-integration']]
-
             }
-
-            Apt::Source<| |> -> Exec<| command == 'update-midonet-repos' |>
-
         }
         else
         {
