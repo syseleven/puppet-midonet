@@ -27,7 +27,7 @@ class midonet::midonet_api::install inherits midonet::midonet_api{
     require midonet::repository
     require midonet::midonet_api::augeas
 
-    if $midonet::midonet_agent::install_java {
+    if $midonet::midonet_api::install_java {
         $require = Class['java']
         if ! defined(Class['java']) {
           class {'java':
