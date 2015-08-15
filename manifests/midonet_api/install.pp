@@ -42,8 +42,7 @@ class midonet::midonet_api::install inherits midonet::midonet_api{
 
     class {'tomcat':
       install_from_source => false,
-      require             => [$require,
-                              Exec['update-midonet-repos']]
+      require             => $require,
     } ->
 
     package {'midonet-api':
