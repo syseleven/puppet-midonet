@@ -209,7 +209,7 @@ Puppet::Type.type(:midonet_gateway).provide(:midonet_api_caller) do
       req.url "/midonet-api/hosts"
     end
     output = JSON.parse(res.body)
-    return output.select{ |host| host['name'] == resource[:hostname].gsub(/-session\d+/, '') }.to_yaml
+    return output.select{ |host| host['name'] == resource[:hostname].to_s.gsub(/-session\d+$/, '') }
   end
 
   def call_create_uplink_port(router_id, message)
