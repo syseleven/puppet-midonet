@@ -209,6 +209,8 @@ Puppet::Type.type(:midonet_gateway).provide(:midonet_api_caller) do
       req.url "/midonet-api/hosts"
     end
     output = JSON.parse(res.body)
+    notice(output.to_yaml)
+    notice(resource[:hostname].to_s)
     return output.select{ |host| host['name'] =~ /^resource[:hostname].to_s-.*/ }
   end
 
