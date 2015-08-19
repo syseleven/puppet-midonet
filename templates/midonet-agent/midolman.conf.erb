@@ -1,4 +1,4 @@
-opyright 2014 Midokura SARL
+# Copyright 2014 Midokura SARL
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ session_gracetime = 30000
 
 [cassandra]
 # The minimum recommended cassandra setup is a 3-node cluster with a
-# replication factor of 3. Midolman uses Quorum as consistency policy, which
+# replication factor of 3. Midolman uses Quorum as consistency policy, which
 # would translate to 2 in the suggested setup.
 #
 # Refer to the docs/cassandra-cache.md documentation for more specific details
@@ -130,7 +130,7 @@ msgs_per_batch = 200
 
 
 # Midolman limits the amount of packets in flight in the system at any
-# given time. This prevents its internal queues from growing infinitely.
+# given time. This prevents its internal queues from growing infinitely.
 # Additionally, midolman ensures that its processing capacity is shared
 # fairly among ports connected to the datapath. This, for example,
 # would prevent a single VM from setting up new flows at a rate that
