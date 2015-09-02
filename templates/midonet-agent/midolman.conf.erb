@@ -32,7 +32,7 @@ session_gracetime = 30000
 # Refer to the docs/cassandra-cache.md documentation for more specific details
 servers = <%= @cs_seeds.join(",") %>
 # DO CHANGE THIS, recommended value is 3
-replication_factor = 1
+replication_factor = <%= @cassandra_replication_factor %>
 cluster = midonet
 
 [bridge]
