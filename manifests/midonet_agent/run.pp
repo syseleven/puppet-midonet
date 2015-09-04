@@ -24,7 +24,9 @@
 #
 class midonet::midonet_agent::run (
   $zk_servers,
-  $cs_seeds) {
+  $cs_seeds,
+  $cassandra_replication_factor = 1,
+) {
 
     require midonet::midonet_agent::install
 
