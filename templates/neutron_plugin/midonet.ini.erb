@@ -1,5 +1,5 @@
 [MIDONET]
-midonet_uri = http://<%= @midonet_api_ip %>:8080/midonet-api
+midonet_uri = <%= @midonet_api_protocol %>://<%= @midonet_api_ip %>:<%= @midonet_api_port %>/midonet-api
 username = <%= @username %>
 password = <%= @password %>
 project_id = <%= @project_id %>
