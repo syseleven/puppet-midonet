@@ -29,6 +29,7 @@ class midonet::midonet_api::run (
   $tomcat_package,
   $api_ip,
   $api_port,
+  $api_protocol,
   $keystone_host,
   $keystone_port,
   $keystone_admin_token,
