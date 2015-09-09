@@ -45,7 +45,7 @@ class midonet::midonet_api::run (
     } ->
 
     tomcat::config::server::connector {'HTTP/1.1':
-      port                  => $api_port,
+      port                  => '8086',
       catalina_base         => $catalina_base,
       connector_ensure      => 'present',
       additional_attributes => {
